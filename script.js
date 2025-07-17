@@ -24,23 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileBio = document.getElementById('profile-bio');
   const visitorCount = document.getElementById('visitor-count');
   const backgroundMusic = document.getElementById('background-music');
-  const hackerMusic = document.getElementById('hacker-music');
-  const rainMusic = document.getElementById('rain-music');
-  const animeMusic = document.getElementById('anime-music');
-  const carMusic = document.getElementById('car-music');
+  const pistolMusic = document.getElementById('p8stol-music');
+  const idkMusic = document.getElementById('p8stol-music');
+  const lolMusic = document.getElementById('p8stol-music');
+  const ihatealbaniansMusic = document.getElementById('p8stol-music');
   const homeButton = document.getElementById('home-theme');
-  const hackerButton = document.getElementById('hacker-theme');
-  const rainButton = document.getElementById('rain-theme');
-  const animeButton = document.getElementById('anime-theme');
-  const carButton = document.getElementById('car-theme');
+  const p8stolButton = document.getElementById('p8stol-theme');
+  const ihateblacksButton = document.getElementById('p8stol-theme');
+  const tuffButton = document.getElementById('p8stol-theme');
+  const uhidkButton = document.getElementById('p8stol-theme');
   const resultsButtonContainer = document.getElementById('results-button-container');
   const resultsButton = document.getElementById('results-theme');
   const volumeIcon = document.getElementById('volume-icon');
   const volumeSlider = document.getElementById('volume-slider');
   const transparencySlider = document.getElementById('transparency-slider');
   const backgroundVideo = document.getElementById('background');
-  const hackerOverlay = document.getElementById('hacker-overlay');
-  const snowOverlay = document.getElementById('snow-overlay');
+  const p8stolOverlay = document.getElementById('p8stol-overlay');
+  const yesOverlay = document.getElementById('snow-overlay');
   const glitchOverlay = document.querySelector('.glitch-overlay');
   const profileBlock = document.getElementById('profile-block');
   const skillsBlock = document.getElementById('skills-block');
@@ -95,36 +95,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-const startMessage = "Click to enter"; // Your custom text here
+const startMessage = "Click to enter"; 
 let startTextContent = '';
 let startIndex = 0;
 let startCursorVisible = true;
 
 function typeWriterStart() {
-    // First, make sure the element exists and is visible
+
     if (!startText) {
         console.error("Start text element not found");
         return;
     }
     
-    // Reset if we've reached the end
+
     if (startIndex >= startMessage.length) {
         startIndex = 0;
         startTextContent = '';
     }
 
-    // Add next character
+    
     startTextContent = startMessage.slice(0, startIndex + 1);
     startIndex++;
     
-    // Update text with cursor
+    
     startText.textContent = startTextContent + (startCursorVisible ? '|' : ' ');
     
-    // Continue animation
-    setTimeout(typeWriterStart, 150); // Adjust speed here (lower = faster)
+   
+    setTimeout(typeWriterStart, 150); 
 }
 
-// Blinking cursor effect
+
 setInterval(() => {
     if (startText) {
         startCursorVisible = !startCursorVisible;
@@ -132,12 +132,12 @@ setInterval(() => {
     }
 }, 500);
 
-// Initialize immediately
+
 typeWriterStart();
 
 
   function initializeVisitorCounter() {
-    // Permanently set to 5.642 (no storage, no increments)
+    
     document.getElementById('visitor-count').textContent = "5,642";
 }
 
@@ -367,16 +367,16 @@ typeWriterStart();
       case 'home-theme':
         primaryColor = '#00CED1';
         break;
-      case 'hacker-theme':
+      case 'p8stol-theme':
         primaryColor = '#22C55E';
         break;
-      case 'rain-theme':
+      case 'p8stol-theme':
         primaryColor = '#1E3A8A';
         break;
-      case 'anime-theme':
+      case 'p8stol-theme':
         primaryColor = '#DC2626';
         break;
-      case 'car-theme':
+      case 'p8stol-theme':
         primaryColor = '#EAB308';
         break;
       default:
@@ -400,10 +400,10 @@ typeWriterStart();
         currentAudio.muted = isMuted;
         currentAudio.play().catch(err => console.error("Failed to play theme music:", err));
 
-        document.body.classList.remove('home-theme', 'hacker-theme', 'rain-theme', 'anime-theme', 'car-theme');
+        document.body.classList.remove('home-theme', 'p8stol-theme', 'p8stol-theme', 'p8stol-theme', 'p8stol-theme');
         document.body.classList.add(themeClass);
 
-        hackerOverlay.classList.add('hidden');
+        p8stolOverlay.classList.add('hidden');
         snowOverlay.classList.add('hidden');
         profileBlock.style.zIndex = overlayOverProfile ? 10 : 20;
         skillsBlock.style.zIndex = overlayOverProfile ? 10 : 20;
@@ -411,7 +411,7 @@ typeWriterStart();
           overlay.classList.remove('hidden');
         }
 
-        if (themeClass === 'hacker-theme') {
+        if (themeClass === 'p8stol-theme') {
           resultsButtonContainer.classList.remove('hidden');
         } else {
           resultsButtonContainer.classList.add('hidden');
@@ -444,36 +444,36 @@ typeWriterStart();
     switchTheme('assets/background.mp4', backgroundMusic, 'home-theme');
   });
 
-  hackerButton.addEventListener('click', () => {
-    switchTheme('assets/hacker_background.mp4', hackerMusic, 'hacker-theme', hackerOverlay, false);
+  p8stolButton.addEventListener('click', () => {
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme', p8stolOverlay, false);
   });
-  hackerButton.addEventListener('touchstart', (e) => {
+  p8stolButton.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    switchTheme('assets/hacker_background.mp4', hackerMusic, 'hacker-theme', hackerOverlay, false);
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme', p8stolOverlay, false);
   });
 
-  rainButton.addEventListener('click', () => {
-    switchTheme('assets/rain_background.mov', rainMusic, 'rain-theme', snowOverlay, true);
+  p8stolButton.addEventListener('click', () => {
+    switchTheme('assets/p8stol_background.mov', p8stolMusic, 'p8stol-theme', p8stolOverlay, true);
   });
-  rainButton.addEventListener('touchstart', (e) => {
+  p8stolButton.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    switchTheme('assets/rain_background.mov', rainMusic, 'rain-theme', snowOverlay, true);
+    switchTheme('assets/p8stol_background.mov', p8stolMusic, 'p8stol-theme', p8stolOverlay, true);
   });
 
-  animeButton.addEventListener('click', () => {
-    switchTheme('assets/anime_background.mp4', animeMusic, 'anime-theme');
+  p8stolButton.addEventListener('click', () => {
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme');
   });
-  animeButton.addEventListener('touchstart', (e) => {
+  p8stolButton.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    switchTheme('assets/anime_background.mp4', animeMusic, 'anime-theme');
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme');
   });
 
-  carButton.addEventListener('click', () => {
-    switchTheme('assets/car_background.mp4', carMusic, 'car-theme');
+  p8stolButton.addEventListener('click', () => {
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme');
   });
-  carButton.addEventListener('touchstart', (e) => {
+  p8stolButton.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    switchTheme('assets/car_background.mp4', carMusic, 'car-theme');
+    switchTheme('assets/p8stol_background.mp4', p8stolMusic, 'p8stol-theme');
   });
 
  

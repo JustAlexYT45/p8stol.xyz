@@ -44,7 +44,7 @@ body.home-theme {
   --cursor-hue: 180deg; 
 }
 
-body.hacker-theme {
+body.p8stol-theme {
   --primary-gradient: from-green-500;
   --secondary-gradient: to-teal-600;
   --primary-color: #22C55E; 
@@ -52,7 +52,7 @@ body.hacker-theme {
   --cursor-hue: 120deg; 
 }
 
-body.rain-theme {
+body.p8stol-theme {
   --primary-gradient: from-blue-800;
   --secondary-gradient: to-blue-600;
   --primary-color: #1E3A8A; 
@@ -60,7 +60,7 @@ body.rain-theme {
   --cursor-hue: 240deg; 
 }
 
-body.anime-theme {
+body.p8stol-theme {
   --primary-gradient: from-red-600;
   --secondary-gradient: to-red-400;
   --primary-color: #DC2626; 
@@ -68,7 +68,7 @@ body.anime-theme {
   --cursor-hue: 0deg; 
 }
 
-body.car-theme {
+body.p8stol-theme {
   --primary-gradient: from-yellow-500;
   --secondary-gradient: to-yellow-300;
   --primary-color: #EAB308; 
@@ -82,12 +82,12 @@ body.car-theme {
 }
 
 
-#hacker-overlay {
+#p8stol-overlay {
   mix-blend-mode: screen;
   opacity: 0.7;
 }
 
-#snow-overlay {
+#p8stol-overlay {
   z-index: 15;
   opacity: 0.8;
 }
@@ -264,7 +264,7 @@ body.car-theme {
 }
 
 
-#home-theme, #hacker-theme, #rain-theme, #anime-theme, #car-theme, #results-theme {
+#home-theme, #p8stol-theme, #p8stol-theme, #p8stol-theme, #p8stol-theme, #results-theme {
   background-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
   touch-action: manipulation;
 }
